@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
-
 public class MainActivity extends RecyclerViewActivity {
 
     private static final String[] items = {"En", "un", "lugar", "de",
@@ -25,8 +23,6 @@ public class MainActivity extends RecyclerViewActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setLayoutManager(new LinearLayoutManager(this));
-        RecyclerView.ItemDecoration separador = new HorizontalDividerItemDecoration.Builder(this).color(getResources().getColor(R.color.colorPrimary)).build();
-        getRecyclerView().addItemDecoration(separador);
         setAdapter(new AdaptadorConIcono());
     }
 
@@ -45,7 +41,7 @@ public class MainActivity extends RecyclerViewActivity {
         }
     }
 
-    static class FilaHolder extends RecyclerView.ViewHolder {
+    /*static class FilaHolder extends RecyclerView.ViewHolder {
         TextView etiqueta = null;
         TextView tamanyo = null;
         ImageView icono = null;
@@ -67,6 +63,7 @@ public class MainActivity extends RecyclerViewActivity {
                 icono.setImageResource(android.R.drawable.btn_star_big_on);
             }
         }
-    }
+    }*/
+
 }
 
